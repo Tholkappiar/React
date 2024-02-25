@@ -2,8 +2,9 @@
   "name": "test",
   "version": "1.0.0",
   "description": "this is just a test file to test",
-  "main": "script.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
@@ -12,6 +13,12 @@
   "author": "Tholkappiar M",
   "license": "ISC",
   "dependencies": {
-    "parcel": "^2.10.3"
+    "parcel": "^2.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "process": "^0.11.10"
   }
 }
