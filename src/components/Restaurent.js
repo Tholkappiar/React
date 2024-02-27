@@ -1,30 +1,32 @@
+import { CLOUD_IMAGE_ID } from "../../utils/constants";
 
 const Restaurent = (props) => {
-
 	const { apiobj } = props;
 
-	const { imageId, action } = apiobj;
-	
+	const {
+		info: { cloudinaryImageId },
+		info: { name },
+	} = apiobj;
+
 	return (
-	<div className="res">
-		<div className="res-container">
-			{/* <div className="search-container">
+		<div className="res">
+			<div className="res-container">
+				{/* <div className="search-container">
 			<input className="search"></input>
 		
 		</div> */}
-			<div className="cards">
 				<div className="card">
-					<img
-						className="food-img"
-						src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" + 
-							imageId}
-					></img>
-					<div className="food-name">{action.text}</div>
+					<div className="food-img-container">
+						<img
+							className="food-img"
+							src={CLOUD_IMAGE_ID + cloudinaryImageId}
+						></img>
+					</div>
+					<div className="food-name">{name}</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	)
+	);
 };
 
 export default Restaurent;
