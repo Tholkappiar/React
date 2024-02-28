@@ -4,6 +4,14 @@ import Restaurent from "./Restaurent";
 const Body = ({ apidata }) => {
 	const [filterData, setFilterData] = useState(apidata);
 
+	const fetchData = async () => {
+		const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+		const data = await response.json();
+			// setFilterData(data);
+			console.log(data)
+	};
+	fetchData();
+
 	return (
 		<>
 			<div>
