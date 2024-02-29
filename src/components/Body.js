@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Restaurent from "./Restaurent";
 
-const Body = ({ apidata }) => {
-	const [filterData, setFilterData] = useState(apidata);
+const Body = () => {
+	const [filterData, setFilterData] = useState([]);
 
-	const fetchData = async () => {
-		const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-		const data = await response.json();
-			// setFilterData(data);
-			console.log(data)
-	};
-	fetchData();
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await fetch(
+				"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+			);
+			const data = await response.json();
+			// setFilterData(data.data.cards[0].card.card.imageGridCards.info);
+			setFilterData(
+				data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+			);
+			console.log(filterData);
+		};
+		fetchData();
+	}, []);
 
 	return (
 		<>
@@ -19,7 +26,7 @@ const Body = ({ apidata }) => {
 					className="filter-btn"
 					onClick={() => {
 						const filteredData = filterData.filter((item) => {
-							console.log(item.info.avgRating);
+							// console.log(item.info.avgRating);
 							return item.info.avgRating > 4;
 						});
 						setFilterData(filteredData);
@@ -29,11 +36,9 @@ const Body = ({ apidata }) => {
 				</button>
 			</div>
 			<div className="body-container">
-				{filterData.map(
-					(restaurent) => (
-						<Restaurent key={restaurent.info.id} apiobj={restaurent} />
-					)
-				)}
+				{filterData.map((filterData) => (
+					<Restaurent key={filterData.info.id} apiobj={filterData} />
+				))}
 			</div>
 		</>
 	);

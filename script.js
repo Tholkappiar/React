@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
-import { mockData } from "./utils/mockData";
 import { Header } from "./src/components/Header";
 import Body from "./src/components/Body";
 
@@ -24,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
 const AppLayout = () => (
 	<div>
 		<Header />
-		<Body apidata={mockData} />
+		<Body/>
 	</div>
 );
 
