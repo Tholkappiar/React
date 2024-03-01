@@ -3,7 +3,12 @@ import { CLOUD_IMAGE_ID } from "../../utils/constants";
 const Restaurent = (props) => {
 	const { apiobj } = props;
 
-	const { info : { cloudinaryImageId },info : { name } }= apiobj;
+	// const { info : { cloudinaryImageId },info : { name } }= apiobj;
+
+	const {
+		cloudinaryImageId,
+		name
+	} = apiobj?.info;
 
 	return (
 		<div className="res-container">

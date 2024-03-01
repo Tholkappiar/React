@@ -17,14 +17,15 @@ const Body = () => {
 		);
 		const data = await response.json();
 		var temp =
-			data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+			data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+				?.restaurants;
 		setFilterData(temp);
 		setData(temp);
 	};
 
 	function search() {
 		if (searchText.trim() == "") {
-			fetchData();
+			setFilterData(Data);
 		} else {
 			let filterSearch = Data.filter((item) =>
 				item.info.name
