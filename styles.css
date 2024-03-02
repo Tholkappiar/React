@@ -25,11 +25,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	gap: 30px;
 }
 
-/* restaurent container */
+/* restaurant container */
 .res-container {
-	width: 250px;
+	width: 200px;
 	display: flex;
 	justify-content: center;
 }

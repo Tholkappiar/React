@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import Restaurent from "./Restaurent";
+import Cards from "./Cards";
+import { RESTAURANT_API_URL } from "../../utils/constants";
+import { Link } from "react-router-dom";
 
 const Body = () => {
 	const [filterData, setFilterData] = useState([]);
@@ -12,15 +14,14 @@ const Body = () => {
 	}, []);
 
 	const fetchData = async () => {
-		const response = await fetch(
-			"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-		);
+		const response = await fetch(RESTAURANT_API_URL);
 		const data = await response.json();
 		var temp =
 			data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
 				?.restaurants;
 		setFilterData(temp);
 		setData(temp);
+		console.log(temp);
 	};
 
 	function search() {
@@ -56,17 +57,23 @@ const Body = () => {
 					className="filter-btn"
 					onClick={() => {
 						const filteredData = filterData.filter((item) => {
-							return item.info.avgRating > 4;
+							return item.info.avgRating > 4.5;
 						});
 						setFilterData(filteredData);
 					}}
 				>
-					Filter Top Restaurents
+					Filter Top Restaurants
 				</button>
 			</div>
 			<div className="body-container">
 				{filterData.map((filterData) => (
-					<Restaurent key={filterData.info.id} apiobj={filterData} />
+					<Link
+						style={{ color: "black", textDecoration: "none" }}
+						key={filterData.info.id}
+						to={`/res/${filterData.info.id}`}
+					>
+						<Cards apiobj={filterData} />
+					</Link>
 				))}
 			</div>
 		</>

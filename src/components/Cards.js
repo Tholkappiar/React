@@ -1,14 +1,11 @@
 import { CLOUD_IMAGE_ID } from "../../utils/constants";
 
-const Restaurent = (props) => {
+const Cards = (props) => {
 	const { apiobj } = props;
 
 	// const { info : { cloudinaryImageId },info : { name } }= apiobj;
 
-	const {
-		cloudinaryImageId,
-		name
-	} = apiobj?.info;
+	const { cloudinaryImageId, name } = apiobj?.info;
 
 	return (
 		<div className="res-container">
@@ -25,4 +22,4 @@ const Restaurent = (props) => {
 	);
 };
 
-export default Restaurent;
+export default Cards;
