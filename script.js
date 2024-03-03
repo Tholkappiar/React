@@ -8,6 +8,7 @@ import { About } from "./src/components/About";
 import { Error } from "./src/components/Error";
 import Contact from "./src/components/Contact";
 import RestaurantsMenu from "./src/components/RestaurantsMenu";
+import UserClass from "./src/components/UserClass";
 
 // const heading = React.createElement("h1", { id: "heading" }, "Hi , I am thols");
 const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
@@ -57,6 +58,10 @@ const appRoute = createBrowserRouter([
 			{
 				path: "/res/:Id",
 				element: <RestaurantsMenu />,
+			},
+			{
+				path: "/class",
+				element: <UserClass name={"thols"} location={"salem"} />,
 			},
 		],
 	},
