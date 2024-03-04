@@ -26,6 +26,8 @@ const RestaurantsMenu = () => {
 
 		fetchData();
 	}, []);
+	// usestate returns the value of the state and the function(bound Dispatch setState) to update the state
+	// console.log(useState());
 
 	return (
 		<>
