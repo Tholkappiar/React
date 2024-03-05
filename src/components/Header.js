@@ -6,9 +6,15 @@ export const Header = () => (
 		<img className="logo" src={logo}></img>
 		<div className="nav">
 			<ul className="nav-items">
-				<Link to={"/about"} className="link">About Us</Link>
-				<Link to={"/contact"} className="link">Contact</Link>
-				<Link to={"/cart"} className="link">Cart</Link>
+				<Link to={"/about"} className="link">
+					About Us
+				</Link>
+				<Link to={"/contact"} className="link">
+					Contact
+				</Link>
+				<Link to={"/func"} className="link">
+					Cart
+				</Link>
 			</ul>
 		</div>
 	</div>
