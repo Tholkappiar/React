@@ -6,7 +6,7 @@ export const Error = () => {
 	return (
 		<React.Fragment>
 			<h1>Something went wrong</h1>
-			<div>{arr.error.message}</div>
+			{/* <div>{arr.error.message}</div> */}
 		</React.Fragment>
 	);
 };

@@ -1,31 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { RESTAURANT_API_URL } from "../../utils/constants";
-import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../Hooks/useRestaurentMenu";
 
 const RestaurantsMenu = () => {
-	const [restaurant, setRestaurant] = useState([]);
-	const { Id } = useParams();
-	console.log(Id);
-
-	useEffect(() => {
-		const fetchData = async () => {
-			const temp = await fetch(RESTAURANT_API_URL);
-			const data = await temp.json();
-			const res =
-				data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-					?.restaurants;
-
-			if (res) {
-				const filtered = res.filter((item) => {
-					return item.info.id == Id;
-				});
-				setRestaurant(filtered);
-			}
-		};
-
-		fetchData();
-	}, []);
+	const restaurant = useRestaurantMenu();
 	// usestate returns the value of the state and the function(bound Dispatch setState) to update the state
 	// console.log(useState());
 

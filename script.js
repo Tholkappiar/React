@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
-import { Header } from "./src/components/Header";
+// import { Header } from "";
 import Body from "./src/components/Body";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { About } from "./src/components/About";
@@ -9,7 +9,6 @@ import { Error } from "./src/components/Error";
 import Contact from "./src/components/Contact";
 import RestaurantsMenu from "./src/components/RestaurantsMenu";
 import UserClass from "./src/components/UserClass";
-import UserFunc from "./src/components/UserFunc";
 
 // const heading = React.createElement("h1", { id: "heading" }, "Hi , I am thols");
 const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
@@ -27,9 +26,13 @@ const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
  *  - social
  */
 
+const Header = lazy(() => import("./src/components/Header"));
+
 const AppLayout = () => (
 	<div>
-		<Header />
+		<Suspense fallback={<div>Loading.........</div>}>
+			<Header />
+		</Suspense>
 		<Outlet />
 	</div>
 );
@@ -38,7 +41,6 @@ const appRoute = createBrowserRouter([
 	{
 		path: "/",
 		element: <AppLayout />,
-		errorElement: <Error />,
 		children: [
 			{
 				path: "/",

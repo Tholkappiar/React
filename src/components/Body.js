@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import Cards from "./Cards";
+import { Suspense, lazy, useEffect, useState } from "react";
+// import Cards from "./Cards";
 import { RESTAURANT_API_URL } from "../../utils/constants";
 import { Link } from "react-router-dom";
+
+const Cards = lazy(() => import("./Cards"));
 
 const Body = () => {
 	const [filterData, setFilterData] = useState([]);
@@ -72,7 +74,9 @@ const Body = () => {
 						key={filterData.info.id}
 						to={`/res/${filterData.info.id}`}
 					>
-						<Cards apiobj={filterData} />
+						<Suspense fallback={"Loading.."}>
+							<Cards apiobj={filterData} />
+						</Suspense>
 					</Link>
 				))}
 			</div>
