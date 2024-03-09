@@ -5,10 +5,10 @@ const Header = () => {
 	const onlineStatus = useOnlineStatus();
 
 	return (
-		<div className="header-container">
-			<img className="logo" src={logo}></img>
-			<div className="nav">
-				<ul className="nav-items">
+		<div className="flex justify-around">
+			<img className="size-20" src={logo}></img>
+			<div className="flex items-center">
+				<ul className="font-sans flex gap-8">
 					<div>online Status : {onlineStatus ? "✅" : "❌"}</div>
 					<Link to={"/about"} className="link">
 						About Us

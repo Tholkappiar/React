@@ -8,15 +8,15 @@ const Cards = (props) => {
 	const { cloudinaryImageId, name } = apiobj?.info;
 
 	return (
-		<div className="res-container">
-			<div className="card">
-				<div className="food-img-container">
+		<div className="flex flex-wrap">
+			<div className="h-[270px] w-[220px] flex flex-col items-center">
+				<div className="size-50">
 					<img
-						className="food-img"
+						className="p-4 m-2 w-[200px] h-[210px] bg-gray-200 object-cover"
 						src={CLOUD_IMAGE_ID + cloudinaryImageId}
 					></img>
 				</div>
-				<div className="food-name">{name}</div>
+				<div className="text-balance text-xs text-center size-40">{name}</div>
 			</div>
 		</div>
 	);

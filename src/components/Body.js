@@ -42,8 +42,9 @@ const Body = () => {
 
 	return (
 		<>
-			<div>
+			<div className="flex justify-center gap-2">
 				<input
+					className="border border-solid border-black"
 					value={searchText}
 					onChange={(e) => {
 						setSearchText(e.target.value);
@@ -56,7 +57,7 @@ const Body = () => {
 					}}
 				></input>
 				<button
-					className="filter-btn"
+					className="bg-gray-300 rounded-sm text-[15px] p-1 border border-solid border-black"
 					onClick={() => {
 						const filteredData = filterData.filter((item) => {
 							return item.info.avgRating > 4.5;
@@ -67,7 +68,7 @@ const Body = () => {
 					Filter Top Restaurants
 				</button>
 			</div>
-			<div className="body-container">
+			<div className="flex flex-wrap gap-2 justify-center mt-4">
 				{filterData.map((filterData) => (
 					<Link
 						style={{ color: "black", textDecoration: "none" }}
