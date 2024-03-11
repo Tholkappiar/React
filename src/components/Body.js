@@ -73,7 +73,7 @@ const Body = () => {
 					<Link
 						style={{ color: "black", textDecoration: "none" }}
 						key={filterData.info.id}
-						to={`/res/${filterData.info.id}`}
+						to={"/res/" + filterData.info.id}
 					>
 						<Suspense fallback={"Loading.."}>
 							<Cards apiobj={filterData} />

@@ -3,19 +3,23 @@ import useRestaurantMenu from "../Hooks/useRestaurentMenu";
 
 const RestaurantsMenu = () => {
 	const restaurant = useRestaurantMenu();
-	// usestate returns the value of the state and the function(bound Dispatch setState) to update the state
-	// console.log(useState());
+
+	// console.log(restaurant);
+
+	const items = restaurant.map((restaurant) => {
+		return restaurant.card.card.itemCards;
+	});
 
 	return (
 		<>
 			<ul>
-				{restaurant.map((item) => (
-					<React.Fragment key={item.info.id}>
-						<li>{item.info.name}</li>
-						<li>{item.info.locality}</li>
-						<li>{item.info.avgRating}</li>
-					</React.Fragment>
-				))}
+				{items.map((item) =>
+					item.map((dish) => (
+						<React.Fragment key={dish.card.info.id}>
+							<div>{dish.card.info.name}</div>
+						</React.Fragment>
+					))
+				)}
 			</ul>
 		</>
 	);

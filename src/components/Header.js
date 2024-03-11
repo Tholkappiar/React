@@ -5,7 +5,7 @@ const Header = () => {
 	const onlineStatus = useOnlineStatus();
 
 	return (
-		<div className="flex justify-around">
+		<div className="flex justify-around bg-gray-300 mb-4">
 			<img className="size-20" src={logo}></img>
 			<div className="flex items-center">
 				<ul className="font-sans flex gap-8">
