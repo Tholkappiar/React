@@ -12,7 +12,7 @@ const RestaurantsMenu = () => {
 	// });
 	console.log(restaurant);
 	return (
-		<div className="flex items-center flex-col">
+		<div className="flex flex-col">
 			{restaurant.map((restaurant) => (
 				<RestaurantCategory restaurant={restaurant} />
 			))}

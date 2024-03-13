@@ -68,7 +68,7 @@ const Body = () => {
 					Filter Top Restaurants
 				</button>
 			</div>
-			<div className="flex flex-wrap gap-2 justify-center mt-4">
+			<div className="flex flex-wrap gap-16 justify-center my-16">
 				{filterData.map((filterData) => (
 					<Link
 						style={{ color: "black", textDecoration: "none" }}
