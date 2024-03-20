@@ -10,11 +10,13 @@ const RestaurantsMenu = () => {
 	// const items = restaurant.map((restaurant) => {
 	// 	return restaurant.card.card.itemCards;
 	// });
-	console.log(restaurant);
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col items-center">
 			{restaurant.map((restaurant) => (
-				<RestaurantCategory restaurant={restaurant} />
+				<RestaurantCategory
+					key={restaurant.card.card.title}
+					restaurant={restaurant}
+				/>
 			))}
 		</div>
 	);

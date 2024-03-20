@@ -19,11 +19,11 @@ const Body = () => {
 		const response = await fetch(RESTAURANT_API_URL);
 		const data = await response.json();
 		var temp =
-			data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+			data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
 				?.restaurants;
 		setFilterData(temp);
 		setData(temp);
-		console.log(temp);
+		console.log("temp api ", data);
 	};
 
 	function search() {
@@ -69,17 +69,21 @@ const Body = () => {
 				</button>
 			</div>
 			<div className="flex flex-wrap gap-16 justify-center my-16">
-				{filterData.map((filterData) => (
-					<Link
-						style={{ color: "black", textDecoration: "none" }}
-						key={filterData.info.id}
-						to={"/res/" + filterData.info.id}
-					>
-						<Suspense fallback={"Loading.."}>
-							<Cards apiobj={filterData} />
-						</Suspense>
-					</Link>
-				))}
+				{filterData.map((filterData) => {
+					if (filterData) {
+						return (
+							<Link
+								style={{ color: "black", textDecoration: "none" }}
+								key={filterData.info.id}
+								to={"/res/" + filterData.info.id}
+							>
+								<Suspense fallback={"Loading.."}>
+									<Cards apiobj={filterData} />
+								</Suspense>
+							</Link>
+						);
+					}
+				})}
 			</div>
 		</>
 	);

@@ -1,11 +1,8 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
-import "./src/output.css";
-// import { Header } from "";
 import Body from "./src/components/Body";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { About } from "./src/components/About";
-import { Error } from "./src/components/Error";
 import Contact from "./src/components/Contact";
 import RestaurantsMenu from "./src/components/RestaurantsMenu";
 import UserClass from "./src/components/UserClass";
