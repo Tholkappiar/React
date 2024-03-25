@@ -1,9 +1,12 @@
 import React from "react";
 import useRestaurantMenu from "../Hooks/useRestaurentMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
 
 const RestaurantsMenu = () => {
 	const restaurant = useRestaurantMenu();
+
+	const [showIndex, setShowIndex] = useState(null);
 
 	// console.log(restaurant);
 
@@ -12,10 +15,12 @@ const RestaurantsMenu = () => {
 	// });
 	return (
 		<div className="flex flex-col items-center">
-			{restaurant.map((restaurant) => (
+			{restaurant.map((restaurant, index) => (
 				<RestaurantCategory
 					key={restaurant.card.card.title}
 					restaurant={restaurant}
+					showIndex={showIndex == index ? true : false}
+					setShowIndex={() => setShowIndex(index)}
 				/>
 			))}
 		</div>
