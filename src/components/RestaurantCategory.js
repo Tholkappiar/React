@@ -2,11 +2,8 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ restaurant, setShowIndex, showIndex }) => {
-	const [showDish, setShowDish] = useState(false);
-
 	const toggleShowDish = () => {
 		setShowIndex();
-		console.log(setShowIndex());
 	};
 
 	return (

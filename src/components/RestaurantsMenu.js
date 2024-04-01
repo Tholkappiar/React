@@ -13,6 +13,14 @@ const RestaurantsMenu = () => {
 	// const items = restaurant.map((restaurant) => {
 	// 	return restaurant.card.card.itemCards;
 	// });
+
+	const changeMenuState = (index) => {
+		if (index == showIndex) {
+			setShowIndex(null);
+			return;
+		}
+		setShowIndex(index);
+	};
 	return (
 		<div className="flex flex-col items-center">
 			{restaurant.map((restaurant, index) => (
@@ -20,7 +28,7 @@ const RestaurantsMenu = () => {
 					key={restaurant.card.card.title}
 					restaurant={restaurant}
 					showIndex={showIndex == index ? true : false}
-					setShowIndex={() => setShowIndex(index)}
+					setShowIndex={() => changeMenuState(index)}
 				/>
 			))}
 		</div>
