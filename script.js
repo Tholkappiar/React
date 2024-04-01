@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useContext, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Body from "./src/components/Body";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -6,6 +6,7 @@ import { About } from "./src/components/About";
 import Contact from "./src/components/Contact";
 import RestaurantsMenu from "./src/components/RestaurantsMenu";
 import UserClass from "./src/components/UserClass";
+import UserContext from "./src/components/UserContext";
 
 // const heading = React.createElement("h1", { id: "heading" }, "Hi , I am thols");
 const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
@@ -25,14 +26,20 @@ const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
 
 const Header = lazy(() => import("./src/components/Header"));
 
-const AppLayout = () => (
-	<div>
-		<Suspense fallback={<div>Loading.........</div>}>
-			<Header />
-		</Suspense>
-		<Outlet />
-	</div>
-);
+const AppLayout = () => {
+	const [username, setusername] = useState(useContext(UserContext).user);
+
+	return (
+		<div>
+			<UserContext.Provider value={{ user: username, setusername }}>
+				<Suspense fallback={<div>Loading.........</div>}>
+					<Header />
+				</Suspense>
+				<Outlet />
+			</UserContext.Provider>
+		</div>
+	);
+};
 
 const appRoute = createBrowserRouter([
 	{

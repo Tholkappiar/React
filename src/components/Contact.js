@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useContext } from "react";
+import UserContext from "./UserContext";
 
 function Contact() {
-  return (
-    <div>Contact</div>
-  )
+	const user = useContext(UserContext);
+	console.log(user);
+
+	const { setusername } = useContext(UserContext);
+
+	return (
+		<div className="flex justify-center ">
+			<input
+				className="outline-none shadow-md rounded-lg p-2"
+				placeholder="Username"
+				onChange={(e) => setusername(e.target.value)}
+			/>
+		</div>
+	);
 }
 
-export default Contact
+export default Contact;
