@@ -27,6 +27,7 @@ const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
 const Header = lazy(() => import("./src/components/Header"));
 
 const AppLayout = () => {
+	// todo: This is just for the learning purpose of context in react , remove this onchange context afterwards !
 	const [username, setusername] = useState(useContext(UserContext).user);
 
 	return (
