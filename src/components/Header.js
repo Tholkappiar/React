@@ -1,16 +1,19 @@
-import { useContext } from "react";
+import { createFactory, useContext } from "react";
 import logo from "../../Assets/food-logo.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Hooks/useOnlineStatus";
 import UserContext from "./UserContext";
+import { useSelector } from "react-redux";
+// import appStore from "../../utils/AppStore";
 
 const Header = () => {
 	const onlineStatus = useOnlineStatus();
 
 	let { isLoggedIn, user } = useContext(UserContext);
 	isLoggedIn = true;
-	console.log(isLoggedIn);
-
+	// console.log(isLoggedIn);
+	const cartItems = useSelector((store) => store.cart.items);
+	console.log(cartItems);
 	return (
 		<div className="flex justify-around bg-gray-300 mb-4">
 			<img className="size-20" src={logo}></img>
@@ -24,7 +27,7 @@ const Header = () => {
 						Contact
 					</Link>
 					<Link to={"/func"} className="link">
-						Cart
+						Cart - {cartItems.length}
 					</Link>
 					<p>{user}</p>
 				</ul>

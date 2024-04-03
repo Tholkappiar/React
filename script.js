@@ -7,6 +7,8 @@ import Contact from "./src/components/Contact";
 import RestaurantsMenu from "./src/components/RestaurantsMenu";
 import UserClass from "./src/components/UserClass";
 import UserContext from "./src/components/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/AppStore";
 
 // const heading = React.createElement("h1", { id: "heading" }, "Hi , I am thols");
 const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
@@ -29,15 +31,16 @@ const Header = lazy(() => import("./src/components/Header"));
 const AppLayout = () => {
 	// todo: This is just for the learning purpose of context in react , remove this onchange context afterwards !
 	const [username, setusername] = useState(useContext(UserContext).user);
-
 	return (
 		<div>
-			<UserContext.Provider value={{ user: username, setusername }}>
-				<Suspense fallback={<div>Loading.........</div>}>
-					<Header />
-				</Suspense>
-				<Outlet />
-			</UserContext.Provider>
+			<Provider store={appStore}>
+				<UserContext.Provider value={{ user: username, setusername }}>
+					<Suspense fallback={<div>Loading.........</div>}>
+						<Header />
+					</Suspense>
+					<Outlet />
+				</UserContext.Provider>
+			</Provider>
 		</div>
 	);
 };
