@@ -3,14 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const cardSlice = createSlice({
 	name: "CardSlice",
 	initialState: {
-		items: ["pizza", "briyani"],
+		items: [],
 	},
 	reducers: {
 		addItems: (state, action) => {
-			state.push(action.payload);
+			state.items.push(action.payload);
 		},
 		removeItem: (state) => {
-			state.pop();
+			state.items.pop();
 		},
 		clearItems: (state) => {
 			state.items = [];

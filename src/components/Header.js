@@ -13,20 +13,23 @@ const Header = () => {
 	isLoggedIn = true;
 	// console.log(isLoggedIn);
 	const cartItems = useSelector((store) => store.cart.items);
-	console.log(cartItems);
+
 	return (
 		<div className="flex justify-around bg-gray-300 mb-4">
 			<img className="size-20" src={logo}></img>
 			<div className="flex items-center">
 				<ul className="font-sans flex gap-8">
 					<div>online Status : {onlineStatus ? "✅" : "❌"}</div>
+					<Link to={"/"} className="link">
+						Home
+					</Link>
 					<Link to={"/about"} className="link">
 						About Us
 					</Link>
 					<Link to={"/contact"} className="link">
 						Contact
 					</Link>
-					<Link to={"/func"} className="link">
+					<Link to={"/cart"} className="link">
 						Cart - {cartItems.length}
 					</Link>
 					<p>{user}</p>

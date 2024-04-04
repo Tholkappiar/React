@@ -1,0 +1,416 @@
+[
+	{
+		"card": {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+			"info": {
+				"id": "89855502",
+				"name": "Jumbo Bucket - Veg Biryani (Serves 3-4)",
+				"category": "Bucket Biryani-  Big Saver",
+				"description": "Serves 4 | Veg Biryani is an elegant combination of spices & seasonal vegetables, layered with aromatic rice served with Veg Kebabs (12Pcs) , Salan , Raita & Gulab Jamun (12Pcs)",
+				"imageId": "lxsinqrc73dza20pdqtv",
+				"inStock": 1,
+				"isVeg": 1,
+				"price": 85900,
+				"variants": {},
+				"variantsV2": {},
+				"addons": [
+					{
+						"groupId": "143270793",
+						"groupName": "Top ups",
+						"choices": [
+							{
+								"id": "115446064",
+								"name": "Cajun Dip",
+								"price": 1900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446060",
+								"name": "Raita",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446062",
+								"name": "Salan",
+								"price": 5900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446061",
+								"name": "Garden Salad",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446063",
+								"name": "Mint Chutney",
+								"price": 1500,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 5,
+						"maxFreeAddons": -1
+					},
+					{
+						"groupId": "138638553",
+						"groupName": "Add on Desserts",
+						"choices": [
+							{
+								"id": "114123997",
+								"name": "Chocolate Brownie (Save Rs 20)",
+								"price": 11900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "114123996",
+								"name": "Angoori Jamun (12 Nos) (Save Rs 20)",
+								"price": 12900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 2,
+						"maxFreeAddons": -1
+					}
+				],
+				"itemAttribute": {
+					"vegClassifier": "VEG",
+					"portionSize": "Serves 4"
+				},
+				"ribbon": {},
+				"type": "ITEM",
+				"itemBadge": {},
+				"badgesV2": {},
+				"ratings": {
+					"aggregatedRating": {}
+				}
+			},
+			"analytics": {},
+			"hideRestaurantDetails": true
+		}
+	},
+	{
+		"card": {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+			"info": {
+				"id": "89855504",
+				"name": "Family Bucket - Chicken Biryani (Serves 7-8)",
+				"category": "Bucket Biryani-  Big Saver",
+				"description": "Serves 8 | Super Saver Family Combo-2 Buckets of Chicken Biryani Served with Chicken Kebabs (24Pcs), 8 boiled Eggs, Raita, Salan & Angoori Gulab Jamun (24Pcs)",
+				"imageId": "hofjihkdm5mypdjdygya",
+				"inStock": 1,
+				"price": 219900,
+				"variants": {},
+				"variantsV2": {},
+				"addons": [
+					{
+						"groupId": "143270822",
+						"groupName": "Top ups",
+						"choices": [
+							{
+								"id": "115446064",
+								"name": "Cajun Dip",
+								"price": 1900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446060",
+								"name": "Raita",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446062",
+								"name": "Salan",
+								"price": 5900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446061",
+								"name": "Garden Salad",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446063",
+								"name": "Mint Chutney",
+								"price": 1500,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 5,
+						"maxFreeAddons": -1
+					},
+					{
+						"groupId": "138638593",
+						"groupName": "Add on Desserts",
+						"choices": [
+							{
+								"id": "114123997",
+								"name": "Chocolate Brownie (Save Rs 20)",
+								"price": 11900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "114123996",
+								"name": "Angoori Jamun (12 Nos) (Save Rs 20)",
+								"price": 12900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 2,
+						"maxFreeAddons": -1
+					}
+				],
+				"itemAttribute": {
+					"vegClassifier": "NONVEG",
+					"portionSize": "Serves 8"
+				},
+				"ribbon": {},
+				"type": "ITEM",
+				"itemBadge": {},
+				"badgesV2": {},
+				"ratings": {
+					"aggregatedRating": {}
+				}
+			},
+			"analytics": {},
+			"hideRestaurantDetails": true
+		}
+	},
+	{
+		"card": {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+			"info": {
+				"id": "89855505",
+				"name": "Jumbo Bucket - Chicken Biryani (Serves 3-4)",
+				"category": "Bucket Biryani-  Big Saver",
+				"description": "Serves 4 | Scrumptious combo of Chicken Biryani, Served with 4 boiled Eggs, Juicy & flavorful Chicken Kebabs (12Pcs) & small spongy pearl shaped slightly warm Gulab Jamuns.(12Pcs). Bucket loaded with BBQ flavours",
+				"imageId": "uap0tjtidmpwt5raobkp",
+				"inStock": 1,
+				"price": 119900,
+				"variants": {},
+				"variantsV2": {},
+				"addons": [
+					{
+						"groupId": "143270767",
+						"groupName": "Top ups",
+						"choices": [
+							{
+								"id": "115446064",
+								"name": "Cajun Dip",
+								"price": 1900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446060",
+								"name": "Raita",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446062",
+								"name": "Salan",
+								"price": 5900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446061",
+								"name": "Garden Salad",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446063",
+								"name": "Mint Chutney",
+								"price": 1500,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 5,
+						"maxFreeAddons": -1
+					},
+					{
+						"groupId": "138638985",
+						"groupName": "Add on Desserts",
+						"choices": [
+							{
+								"id": "114123997",
+								"name": "Chocolate Brownie (Save Rs 20)",
+								"price": 11900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "114123996",
+								"name": "Angoori Jamun (12 Nos) (Save Rs 20)",
+								"price": 12900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 2,
+						"maxFreeAddons": -1
+					}
+				],
+				"itemAttribute": {
+					"vegClassifier": "NONVEG",
+					"portionSize": "Serves 4"
+				},
+				"ribbon": {},
+				"type": "ITEM",
+				"itemBadge": {},
+				"badgesV2": {},
+				"ratings": {
+					"aggregatedRating": {}
+				}
+			},
+			"analytics": {},
+			"hideRestaurantDetails": true
+		}
+	},
+	{
+		"card": {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+			"info": {
+				"id": "89855506",
+				"name": "Family Bucket - Veg Biryani (Serves 7-8)",
+				"category": "Bucket Biryani-  Big Saver",
+				"description": "Serves 8 | Relish this Biryani combo with familly and friends . 2 Buckets of Veg Biryani  & Veg Kebabs (24Pcs) & Gulab Jamun (24 Nos)  Accompanied with Raita & Salan",
+				"imageId": "ojznqr3uydap2vh49nsv",
+				"inStock": 1,
+				"isVeg": 1,
+				"price": 159900,
+				"variants": {},
+				"variantsV2": {},
+				"addons": [
+					{
+						"groupId": "143270739",
+						"groupName": "Top ups",
+						"choices": [
+							{
+								"id": "115446064",
+								"name": "Cajun Dip",
+								"price": 1900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446060",
+								"name": "Raita",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446062",
+								"name": "Salan",
+								"price": 5900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446061",
+								"name": "Garden Salad",
+								"price": 4900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "115446063",
+								"name": "Mint Chutney",
+								"price": 1500,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 5,
+						"maxFreeAddons": -1
+					},
+					{
+						"groupId": "138639101",
+						"groupName": "Add on Desserts",
+						"choices": [
+							{
+								"id": "114123997",
+								"name": "Chocolate Brownie (Save Rs 20)",
+								"price": 11900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							},
+							{
+								"id": "114123996",
+								"name": "Angoori Jamun (12 Nos) (Save Rs 20)",
+								"price": 12900,
+								"inStock": 1,
+								"isVeg": 1,
+								"isEnabled": 1
+							}
+						],
+						"maxAddons": 2,
+						"maxFreeAddons": -1
+					}
+				],
+				"itemAttribute": {
+					"vegClassifier": "VEG",
+					"portionSize": "Serves 8"
+				},
+				"ribbon": {},
+				"type": "ITEM",
+				"itemBadge": {},
+				"badgesV2": {},
+				"ratings": {
+					"aggregatedRating": {}
+				}
+			},
+			"analytics": {},
+			"hideRestaurantDetails": true
+		}
+	}
+]

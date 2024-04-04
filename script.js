@@ -9,6 +9,7 @@ import UserClass from "./src/components/UserClass";
 import UserContext from "./src/components/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/AppStore";
+import Cart from "./src/components/Cart";
 
 // const heading = React.createElement("h1", { id: "heading" }, "Hi , I am thols");
 const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
@@ -65,6 +66,10 @@ const appRoute = createBrowserRouter([
 			{
 				path: "/res/:Id",
 				element: <RestaurantsMenu />,
+			},
+			{
+				path: "/cart",
+				element: <Cart />,
 			},
 			{
 				path: "/class",
