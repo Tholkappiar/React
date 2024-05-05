@@ -19,11 +19,10 @@ const Body = () => {
 		const response = await fetch(RESTAURANT_API_URL);
 		const data = await response.json();
 		var temp =
-			data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+			data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
 				?.restaurants;
 		setFilterData(temp);
 		setData(temp);
-		// console.log("temp api ", data);
 	};
 
 	function search() {

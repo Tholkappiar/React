@@ -14,7 +14,7 @@ const useRestaurantMenu = () => {
 
 	const filterData = (unfilteredData) => {
 		const chunkedData =
-			unfilteredData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+			unfilteredData?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
 		const Menu = chunkedData.filter((chunkedData) => {
 			return (
